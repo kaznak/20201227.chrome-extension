@@ -2,7 +2,9 @@
   "name": "rollup-starter-app",
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
     "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",

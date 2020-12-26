@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import size from 'rollup-plugin-size'
+import alias from '@rollup/plugin-alias'
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
@@ -16,6 +17,12 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    alias({
+      entries: [
+        { find: 'react', replacement: 'preact/compat' },
+        { find: 'react-dom', replacement: 'preact/compat' },
+      ],
+    }),
     resolve(), // tells Rollup how to find date-fns in node_modules
     commonjs(), // converts date-fns to ES modules
     babel({ babelHelpers: 'bundled' }),

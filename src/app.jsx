@@ -3,7 +3,7 @@ import { h, Component, render } from 'preact'
 const appContainer = document.querySelector('#app')
 
 function MyComponent(props) {
-  return h('div', null, `My name is ${props.name}.`)
+  return <div>{`My name is ${props.name}.`}</div>
 }
 
 export default function mount() {

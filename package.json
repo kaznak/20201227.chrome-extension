@@ -54,7 +54,7 @@
     "lint:js": "eslint .",
     "lint": "yarn lint:css && yarn lint:js",
     "clean": "rm -rf public/js public/css",
-    "build:css": "postcss style/base.css -o public/css/style.css",
+    "build:css": "NODE_ENV=production postcss style/base.css -o public/css/style.css",
     "build:js": "rollup -c",
     "build": "yarn build:css && yarn build:js",
     "watch:css": "postcss style/base.css -o public/css/style.css -w",

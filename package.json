@@ -42,6 +42,7 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint .",
+    "clean": "rm -f public/js/*",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",

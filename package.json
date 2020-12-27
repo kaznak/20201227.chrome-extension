@@ -50,7 +50,9 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "lint": "eslint .",
+    "lint:css": "stylelint 'style/**/*.css'",
+    "lint:js": "eslint .",
+    "lint": "yarn lint:css && yarn lint:js",
     "clean": "rm -rf public/js public/css",
     "build:css": "postcss style/base.css -o public/css/style.css",
     "build:js": "rollup -c",

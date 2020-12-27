@@ -1,0 +1,11 @@
+@lost gutter 1rem;
+
+.grid-container {
+  lost-utility: clearfix;
+}
+
+.grid-item1\/2 {
+  margin-top: calc($lost-gutter / 2);
+  margin-bottom: calc($lost-gutter / 2);
+  lost-column: 1/2 0;
+}

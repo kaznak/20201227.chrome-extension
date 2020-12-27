@@ -1,5 +1,8 @@
 {
-  "name": "rollup-starter-app",
+  "name": "20201227-chrome-extension",
+  "author": "kaznak <kaznak.at.work@gmail.com>",
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-transform-react-jsx": "^7.12.12",

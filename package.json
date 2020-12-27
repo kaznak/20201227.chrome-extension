@@ -49,9 +49,13 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint .",
-    "clean": "rm -f public/js/*",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
+    "clean": "rm -rf public/js public/css",
+    "build:css": "postcss style/base.css -o public/css/style.css",
+    "build:js": "rollup -c",
+    "build": "yarn build:css && yarn build:js",
+    "watch:css": "postcss style/base.css -o public/css/style.css -w",
+    "watch:js": "rollup -c -w",
+    "watch": "npm-run-all --parallel watch:css watch:js",
     "dev": "npm-run-all --parallel start watch",
     "start": "serve public"
   }
